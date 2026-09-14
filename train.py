@@ -14,6 +14,7 @@ dataset = TensorDataset(
 batch_size = 8
 loader = DataLoader(dataset, batch_size=batch_size, shuffle=True)
 
+
 if torch.backends.mps.is_available():
     device = torch.device("mps")
 elif torch.cuda.is_available():
@@ -21,12 +22,15 @@ elif torch.cuda.is_available():
 else:
     device = torch.device("cpu")
 
+
+
 model = GPT2LMHeadModel.from_pretrained("gpt2")
 model.to(device)
 
 optimizer = AdamW(model.parameters(), lr=5e-5)
 epochs = 3
-print("\n--- Starting Training ---")
+
+print("\n--- starting training... ---")
 for epoch in range(epochs):
     model.train()
     total_loss = 0.0
@@ -59,4 +63,4 @@ for epoch in range(epochs):
     print(f"\n>>> Epoch {epoch + 1} Complete | Average Loss: {epoch_avg:.4f} <<<\n")
 
 torch.save(model.state_dict(), "trained_weights.pt")
-print("Training complete.\n")
+print("training complete.\n")
