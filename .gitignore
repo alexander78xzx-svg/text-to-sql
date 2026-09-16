@@ -1,2 +1,14 @@
-venv
+__pycache__/
+*.py[cod]
+*$py.class
+venv/
+.env
+
 *.pt
+*.bin
+*.safetensors
+train_data.pt
+trained_weights.pt
+
+.DS_Store
+.vscode/
