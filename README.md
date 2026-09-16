@@ -11,7 +11,7 @@ An asynchronous microservice that translates natural language questions into exe
 
 The system is deployed and accessible via the production web application:
 
-* **Live Interactive Demo:** []()
+* **Live Interactive Demo:** [https://text-to-sql-web-chi.vercel.app](https://text-to-sql-web-chi.vercel.app)
 * **Frontend Source Code:** [Text-to-SQL Web Client](https://github.com/alexander78xzx-svg/text-to-sql-web)
 ---
 
